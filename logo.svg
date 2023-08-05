@@ -1,0 +1,17 @@
+<svg width="59" height="41" viewBox="0 0 59 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="logo">
+<rect width="59" height="40.6496" rx="2" fill="url(#paint0_linear_371_7)" fill-opacity="0.77"/>
+<g id="Layer 1">
+<g id="Group">
+<path id="Vector" opacity="0.97" d="M4 25.2734V36.5852C4 37.4374 4.70103 38.1378 5.55395 38.1378H30.8845C31.7375 38.1378 32.4385 37.4374 32.4385 36.5852V20.0903C32.4385 19.2381 31.7375 18.5377 30.8845 18.5377H7.51684C6.16151 18.5377 5.46048 16.9384 6.37182 15.9345L18.6048 4.58762C19.1423 3.99226 20.0419 3.91055 20.6845 4.38917L54.3808 30.1413C54.7663 30.4332 55 30.8885 55 31.3788V36.5619C55 37.4141 54.299 38.1145 53.446 38.1145H41.3533C40.5003 38.1145 39.7993 37.4141 39.7993 36.5619V3" stroke="#F1F2F2" stroke-width="2.5" stroke-miterlimit="10"/>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_371_7" x1="29.5" y1="0" x2="29.5" y2="40.6496" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A8A8CD"/>
+<stop offset="0.494792" stop-color="#644DA0"/>
+<stop offset="0.963442" stop-color="#9747FF"/>
+</linearGradient>
+</defs>
+</svg>

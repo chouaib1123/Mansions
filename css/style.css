@@ -1,10 +1,14 @@
 .first_vue {
     width: 100%;
-    height: 990px;
-    background: #09000C;
+
+    background: #A8A8CD;
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
+    z-index: 0;
 }
+
+/*background animation and style*/
+
 
 .f_cercle {
     position: absolute;
@@ -12,7 +16,7 @@
     height: 308.392px;
     flex-shrink: 0;
     margin-top: 3px;
-    background: rgba(100, 77, 160, 0.50);
+    background: rgba(100, 77, 160, 0.6);
     filter: blur(125px);
     animation: anim1 10s ease-in-out infinite;
     animation-delay: 2s;
@@ -39,7 +43,7 @@
     height: 396.696px;
     transform: rotate(-179.59deg);
     flex-shrink: 0;
-    background: rgba(100, 77, 160, 0.50);
+    background: rgba(100, 77, 160, 0.6);
     filter: blur(125px);
     margin-left: 171px;
     margin-top: 198px;
@@ -67,7 +71,7 @@
     height: 262.585px;
     transform: rotate(-179.59deg);
     flex-shrink: 0;
-    background: rgba(100, 77, 160, 0.50);
+    background: rgba(100, 77, 160, 0.6);
     filter: blur(125px);
     margin-left: 1125px;
     margin-top: 113.24px;
@@ -95,7 +99,7 @@
     height: 366.784px;
     transform: rotate(-179.59deg);
     flex-shrink: 0;
-    background: rgba(100, 77, 160, 0.50);
+    background: rgba(100, 77, 160, 0.6);
     filter: blur(125px);
     margin-left: 1646px;
     margin-top: 358px;
@@ -117,39 +121,783 @@
     }
 }
 
-.nav_items {
-    color: #E5E4ED;
-    font-family: Martel;
+.cerc {
+    z-index: -1;
+}
+
+/*end of backound animations*/
+
+
+/*navbar css*/
+.nav_item a {
+    color: #F8F8FB;
+    font-family: 'Coco Gothic Regular';
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     text-decoration: none;
-    margin-right: 25px;
 }
 
-.cost_btn span {
+.nav_item {
+    position: relative;
+    margin-right: 25px;
+    overflow: hidden;
+    padding-top: 3px;
+    padding-bottom: 2px;
+}
+
+.nav_items_container {
+    display: flex;
+
+}
+
+.nav_item::before {
+
+    content: ' ';
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    transform: translateX(-120%);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.nav_item:hover::before {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.butn span {
+
+    font-family: 'Coco Gothic Regular';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
     color: #F8F8FB;
-    font-family: Martel;
+    margin: 18px 30px 18px;
+
+
+}
+
+.butn {
+    border-radius: 5px;
+    border-color: transparent;
+
+    height: 70px;
+    flex-shrink: 0;
+    overflow: hidden;
+    background-color: #644DA0;
+    position: relative;
+    transition: all 0.7s;
+    border: none;
+    z-index: 999999999;
+
+}
+
+.butn:hover span,
+.butn:hover {
+    color: #644DA0;
+    background-color: transparent;
+}
+
+.butn::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 0%;
+    top: 0;
+    right: -40px;
+    height: 100%;
+    background-color: #D9D9D9;
+    transform: skewX(45deg);
+    transition: all 0.7s;
+
+}
+
+.butn:hover::after {
+    width: 160%;
+
+}
+
+.nav-items {
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.row.nav {
+    margin: 50px 100px 50px;
+}
+
+/*End of navbar css*/
+
+
+/*images and barres first section css*/
+.barre1 {
+    position: absolute;
+    width: 124.393px;
+    height: 52.589px;
+    transform: rotate(90deg);
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: rgba(100, 77, 160, 0.50);
+    right: 29%;
+    top: 30%;
+    z-index: -1;
+}
+
+.img1 {
+    position: absolute;
+    z-index: -1;
+    right: 8%;
+    top: 11%;
+}
+
+.img2 {
+    position: absolute;
+    z-index: -1;
+    right: 17%;
+    top: 39%;
+}
+
+.img3 {
+    position: absolute;
+    z-index: -1;
+    right: 10%;
+    top: 52.5%;
+}
+
+.barre2 {
+    position: absolute;
+    width: 147.654px;
+    height: 52.589px;
+    transform: rotate(90deg);
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: #E5E4ED;
+    box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.25);
+    right: 4%;
+    top: 46%;
+    z-index: -1;
+}
+
+.barre3 {
+    position: absolute;
+    z-index: -2;
+    width: 219.458px;
+    height: 52.589px;
+    transform: rotate(90deg);
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: #7476A1;
+    right: 4%;
+    top: 60%;
+}
+
+/*end of images and barres first section css*/
+
+/* Section 1 */
+.row.section1 {
+    margin: 150px 100px 200px;
+}
+
+.section1_title p {
+    color: #F8F8FB;
+    font-family: 'Coco Gothic Regular';
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 90px;
+    width: 892px;
+}
+
+.search_bar_type button {
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 10px;
+    height: 52px;
+    transition: background-color 0.7s ease;
+    padding: 0;
+}
+
+.col.search_bar_type {
+    width: auto;
+}
+
+
+.search_bar_type button span {
+    color: #F8F8FB;
+    font-family: 'Coco Gothic Regular';
     font-size: 20px;
     font-style: normal;
-    font-weight: 800;
+    font-weight: 700;
     line-height: normal;
-    margin: 10px 24px 10px 25px;
+    margin: 11px 25px 11px;
+
 }
 
-.cost_btn {
+.col.search {
+    margin-top: 150px;
+    margin-right: 800px;
+}
+
+.search_details button {
     border-radius: 10px;
-    border: 2px solid #9747FF;
-    background-color: transparent;
-    margin-left: 64px;
-
-    height: 52px;
-    flex-shrink: 0;
+    background: rgba(217, 217, 217, 0.51);
+    border-color: transparent;
+    width: 88.846px;
+    height: 70px;
 }
 
-.nav {
+.search_details button:hover svg g path {
+    fill: #644DA0;
+    transition: 0.6s;
+}
+
+
+.flex-container {
+    display: flex;
     align-items: center;
-    justify-content: center;
-    margin-top: 32px;
 }
+
+.searchbarre input {
+    border-radius: 9px;
+    background: #F8F8FB;
+    width: 481px;
+    height: 70px;
+    flex-shrink: 0;
+    border-color: transparent;
+    margin-left: 30px;
+    outline: none;
+}
+
+.searchbarre input::placeholder {
+    color: #ABABAE;
+    font-family: 'Coco Gothic Regular';
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+.searchbarre {
+    border-radius: 9px;
+    position: relative;
+    background: #F8F8FB;
+    width: 581px;
+    height: 70px;
+    margin-right: 91px;
+}
+
+.cont {
+    width: auto;
+    border-radius: 10px;
+    background: rgba(217, 217, 217, 0.25);
+    width: 100%;
+    padding: 40px 50px 42px 50px;
+}
+
+
+
+.flechholder {
+    position: absolute;
+    top: 22px;
+    right: 5%;
+    background-color: transparent;
+    border: none;
+
+    transition: transform 0.8s ease;
+}
+
+.flechholder:hover {
+    transform: rotate(180deg);
+
+}
+
+
+.sponsor_container {
+
+    background-color: #D9D9D9;
+
+}
+
+
+/* Collections container */
+.collection-container {
+    background: rgba(248, 248, 251, 0.45);
+
+}
+
+.collection_title {
+    color: #000;
+    text-align: center;
+    font-family: 'Coco Gothic Regular';
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 90px;
+
+}
+
+.collection_desc {
+    color: #000;
+    text-align: center;
+    font-family: 'Coco Gothic Regular';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    width: 700px;
+}
+
+.first_collections {
+    display: flex;
+
+}
+
+.cards {
+    display: flex;
+}
+
+.small_details {
+    display: flex;
+    justify-content: end;
+
+}
+
+.small_details div {
+    margin-left: 20px;
+    display: flex;
+    align-items: end;
+}
+
+.small_details div span {
+
+    color: #000;
+    font-family: Chivo;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.card_title {
+    color: #000;
+    font-family: 'Coco Gothic Regular';
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
+
+.card_speech {
+    width: 450px;
+    color: #000;
+    font-family: 'Coco Gothic Regular';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    opacity: 0.8;
+
+}
+
+.money {
+    display: flex;
+    justify-content: end;
+
+    color: #000;
+    font-family: Chivo;
+    font-size: 32px;
+    font-style: bold;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.location span {
+    color: #000;
+    font-family: 'Coco Gothic Light';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.location {
+    display: flex;
+    align-items: end;
+}
+
+.col_type {
+
+    position: absolute;
+    color: #FFF;
+    font-family: 'Coco Gothic Regular';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: 50px;
+    border-radius: 0px 0px 10px 10px;
+    background: rgba(217, 217, 217, 0.60);
+
+}
+
+.location svg {
+    margin-right: 5px;
+}
+
+.nmb {
+    margin-right: 5px;
+}
+
+.Collection_button {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 130px;
+}
+
+.col_btn {
+
+    border-radius: 5px;
+    background-color: #644DA0;
+
+    height: 70px;
+    flex-shrink: 0;
+    border: none;
+    position: relative;
+    transition: all 0.7s;
+    z-index: 9999999;
+    overflow: hidden;
+}
+
+.col_btn span {
+    color: #F8F8FB;
+    font-family: 'Coco Gothic Regular';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 18px 30px 18px;
+}
+
+.col_btn:hover span,
+.col_btn:hover {
+    color: #644DA0;
+    background-color: transparent;
+}
+
+.col_btn::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 0%;
+    top: 0;
+    right: -40px;
+    height: 100%;
+    background-color: #D9D9D9;
+    transform: skewX(45deg);
+    transition: all 0.7s;
+
+}
+
+.col_btn:hover::after {
+    width: 160%;
+
+}
+
+/*/collection-container*/
+
+
+/*how it work container*/
+.howitwork-container {
+    background: #D9D9D9;
+    position: relative;
+}
+
+.hiw-title {
+
+    margin-top: 174px;
+    color: #000;
+    text-align: center;
+    font-family: 'Coco Gothic Regular';
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 90px;
+    /* 140.625% */
+}
+
+.hiw-desc {
+    color: #000;
+    text-align: center;
+    font-family: 'Coco Gothic Regular';
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 150px;
+}
+
+.howitwork_details .row {
+    margin: auto 130px auto;
+
+    overflow: hidden;
+}
+
+.howitwork_details {
+    position: relative;
+    padding-bottom: 200px;
+}
+
+.howitwork_details .row .col {
+    margin: auto 50px auto;
+    padding: 0;
+}
+
+.title {
+    color: #000;
+    width: auto;
+    text-align: center;
+    font-family: 'Coco Gothic Regular';
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 40px auto 8px;
+}
+
+.desc {
+    color: #000;
+    text-align: center;
+    font-family: 'Coco Gothic Regular';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.icon {
+    height: 76px;
+    display: flex;
+    justify-content: center;
+}
+
+.flech1 {
+    position: absolute;
+    left: 21%;
+    top: -5%;
+
+}
+
+.flech2 {
+    position: absolute;
+    left: 44%;
+    top: -10%;
+}
+
+.flech3 {
+    position: absolute;
+    right: 20%;
+}
+
+/*/how it work container*/
+
+
+/*Relators container*/
+.relator-container {
+    background-color: #A8A8CD;
+}
+
+.relator-title {
+    color: #FFF;
+    text-align: center;
+    font-family: 'Coco Gothic Regular';
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 90px;
+    width: 749px;
+    margin: 0 auto;
+    margin-bottom: 13px;
+    padding-top: 160px;
+}
+
+.relator-speech {
+    color: #FFF;
+    text-align: center;
+    font-family: 'Coco Gothic Regular';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 909px;
+    margin: 0 auto;
+    padding-bottom: 53px;
+}
+
+.relators {
+    margin: 0 350px 0;
+
+}
+
+.cardd {
+    display: flex;
+    border-radius: 10px;
+    background: #FFF;
+    margin: auto 50px 50px auto;
+}
+
+.relator-name {
+    color: #000;
+    font-family: 'Coco Gothic Regular';
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 4px;
+}
+
+.relator-desc {
+    color: #000;
+    font-family: 'Coco Gothic Light';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 25px;
+}
+
+.video-section {
+    display: flex;
+    justify-content: center;
+    opacity: 0.8;
+    position: relative;
+    overflow: hidden;
+}
+
+.video {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    z-index: -1;
+    overflow: hidden;
+    
+}
+
+video {
+    filter: blur(7px);
+    
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    margin: 110px 300px auto;
+}
+
+.vid-title {
+    color: #FFF;
+    font-family: 'Coco Gothic Regular';
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 90px;
+    /* 140.625% */
+}
+
+.vid-speech {
+    color: #FFF;
+    font-family: 'Coco Gothic Regular';
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: fit-content;
+
+}
+
+.form-mansion {
+    text-align: center;
+    border-radius: 5px;
+    background: rgba(217, 217, 217, 0.50);
+    margin-left: 100px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+.form-title {
+    color: #FFF;
+    font-family: 'Coco Gothic Regular';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 10px;
+
+}
+
+.form-desc {
+    color: #FFF;
+    font-family: 'Coco Gothic Light';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 40px;
+}
+
+.form-inp {
+    margin-bottom: 22px;
+    padding: 4px;
+    padding-left: 30px;
+    background-color: #F8F8FB;
+    border-radius: 9px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+.form-inp input {
+
+    background: #F8F8FB;
+    width: 497.912px;
+    height: 65.344px;
+    outline: none;
+    border: none;
+}
+
+.form-inp input::placeholder {
+    color: #ABABAE;
+    font-family: 'Coco Gothic Regular';
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+.video-section {
+    margin-top: 132px;
+    padding-bottom: 300px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+
+}
+
+/*/Relators container*/
