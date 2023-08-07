@@ -443,7 +443,7 @@
 /* Collections container */
 .collection-container {
     background: rgba(248, 248, 251, 0.45);
-
+  padding-top: 74px;
 }
 
 .collection_title {
@@ -454,6 +454,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: 90px;
+    
 
 }
 
@@ -465,7 +466,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-
+  margin-bottom: 75px;
     width: 700px;
 }
 
@@ -574,7 +575,7 @@
 .Collection_button {
     display: flex;
     justify-content: center;
-    padding-bottom: 130px;
+    padding-bottom: 75px;
 }
 
 .col_btn {
@@ -762,8 +763,15 @@
 }
 
 .relators {
-    margin: 0 350px 0;
-
+    margin: 130px 150px 229px;
+    display: flex;
+    
+  
+    align-content: center;
+}
+.relator{
+    margin: auto 50px auto;
+    text-align: center;
 }
 
 .cardd {
@@ -774,7 +782,7 @@
 }
 
 .relator-name {
-    color: #000;
+    color: #ffffff;
     font-family: 'Coco Gothic Regular';
     font-size: 36px;
     font-style: normal;
@@ -784,7 +792,7 @@
 }
 
 .relator-desc {
-    color: #000;
+    color: #ffffff;
     font-family: 'Coco Gothic Light';
     font-size: 20px;
     font-style: normal;
@@ -1193,6 +1201,73 @@ video {
 
 /*/Why us container*/
 
+
+
+/*footer container*/
 .footer{
     background: #1D1926;
+    
+  
 }
+.footer-container{
+   
+     max-width: 1980px;
+     margin: 0 auto;
+}
+.innter-footer{
+      margin: auto 150px auto;
+     padding-top: 104px;
+}
+.footer-content{
+    display: flex;
+    margin: 56px auto 170px;
+    
+}
+.footer-speech{
+    color: #FFF;
+font-family: 'Coco Gothic Regular';
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+width: 370px;
+margin-right:196px ;
+}
+.footer-sec{
+    margin-right: 50px;
+}
+.sec-title{
+    color: #FFF;
+font-family: 'Coco Gothic Regular';
+font-size: 32px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin-bottom: 80px;
+}
+.sec a{
+    color: rgba(255, 255, 255, 0.70);
+font-family: Chivo;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-decoration: none;
+
+}
+
+.ligne{
+    height: 1px;
+    background: rgba(255, 255, 255, 0.56);
+}
+.final-ligne{
+    color: rgba(255, 255, 255, 0.77);
+font-family: 'Coco Gothic Regular';
+font-size: 20px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
+text-align: center;
+padding-bottom: 93px;
+}
+/*/footer container*/
