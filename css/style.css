@@ -1,3 +1,4 @@
+
 .first_vue {
     width: 100%;
 
@@ -144,7 +145,7 @@
 
 .nav_item a {
     color: #F8F8FB;
-    font-family: 'Coco Gothic Regular';
+    font-family: 'Coco Gothic';
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -251,29 +252,33 @@
 
     display: flex;
     justify-content: space-between;
+    max-width: 1980px;
 }
 .nav-container{
     margin: 50px 100px 50px;
-    max-width: 1980px;
+    
  
 }
 
-.sticky {
-   
-    
+.sticky {  
     position: fixed ;
     top: 0;
-    
+    left: 0;   
     width: 100%;
-    background-color:#454555;
+    background-color:rgba(116, 118, 161, 0.8);
     margin: 0 auto;
     z-index: 999999999; 
     padding: 10px 100px 10px;
     border-bottom: 10px;
     transition: all 0.3s;
-    opacity: 0.9;
+   
     
 }
+.sticky .nav{
+    margin: 0 auto;
+    
+}
+
 
 /*End of navbar css*/
 
@@ -521,12 +526,17 @@
 }
 
 .first_collections {
-    display: flex;
-
+    display: flex;    
+    justify-content: center;
+    align-items: center;
 }
 
 .cards {
     display: flex;
+}
+.card-container{
+    width:517px;
+    overflow: hidden;
 }
 
 .small_details {
@@ -562,9 +572,9 @@
 }
 
 .card_speech {
-    width: 450px;
+    
     color: #000;
-    font-family: 'Coco Gothic Regular';
+    font-family: 'CocoGothic-Light',sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 300;
@@ -598,10 +608,11 @@
     display: flex;
     align-items: end;
 }
-.col_image{
-    position: relative;
-    z-index: 0;
+.col_image img{
+   
+    max-width: 100%;
 }
+
 .col_type {
 
     position: absolute;
@@ -701,7 +712,7 @@
 .desc {
     color: #000;
     text-align: center;
-    font-family: 'Coco Gothic Regular';
+    font-family: 'CocoGothic-Light',sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
@@ -753,12 +764,19 @@
     font-style: normal;
     font-weight: 700;
     line-height: 90px;
-    width: 749px;
+    
     margin: 0 auto;
     margin-bottom: 13px;
     padding-top: 160px;
 }
-
+.relator-image{
+    width: 184px;
+    display: flex;
+    margin: 0 auto;
+}
+.relator-image img{
+    max-width: 100%;
+}
 .relator-speech {
     color: #FFF;
     text-align: center;
@@ -773,25 +791,18 @@
 }
 
 .relators {
-    margin: 130px 150px 229px;
+    margin: 130px 120px 229px;
     display: flex;
-    
-  
-    align-content: center;
+
 }
 .relator{
-    margin: auto 50px auto;
+    margin: auto 20px auto;
     text-align: center;
     padding: 10px;
     
 }
 
-.cardd {
-    display: flex;
-    border-radius: 10px;
-    background: #FFF;
-    margin: auto 50px 50px auto;
-}
+
 
 .relator-name {
     color: #ffffff;
@@ -804,12 +815,13 @@
 }
 
 .relator-desc {
-    color: #ffffff;
-    font-family: 'Coco Gothic Light';
+    color: #FFF;
+    text-align: center;
+    font-family: 'CocoGothic-Light',sans-serif;
     font-size: 20px;
     font-style: normal;
-    font-weight: 300;
-    line-height: 25px;
+    font-weight: 400;
+    line-height: normal;
 }
 
 .video-section {
@@ -842,7 +854,7 @@ video {
     
     
     align-items: center;
-    margin: 180px 200px 180px;
+    margin: 180px auto 180px;
 }
 
 .vid-title {
@@ -857,7 +869,7 @@ video {
 
 .vid-speech {
     color: #FFF;
-    font-family: 'Coco Gothic Regular';
+    font-family: 'CocoGothic-Light',sans-serif;
     font-size: 28px;
     font-style: normal;
     font-weight: 400;
@@ -866,8 +878,8 @@ video {
 
 }
 .des{
-    display: flex;
-    flex-direction: column;
+    
+    width: 725px;
 }
 .vid-title,.vid-speech{
     display: inline-block;
@@ -877,7 +889,7 @@ video {
     text-align: center;
     border-radius: 5px;
     background: rgba(217, 217, 217, 0.50);
-    margin-left: 50px;
+    margin-left: 100px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
 }
 
@@ -922,7 +934,7 @@ video {
 
 .form-inp input::placeholder {
     color: #ABABAE;
-    font-family: 'Coco Gothic Regular';
+    font-family: 'CocoGothic-Light',sans-serif;
     font-size: 22px;
     font-style: normal;
     font-weight: 400;
@@ -1028,7 +1040,7 @@ video {
 .whyus-card-desc {
     color: #000;
     text-align: center;
-    font-family: 'Coco Gothic Light';
+    font-family: 'CocoGothic-Light',sans-serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
@@ -1129,22 +1141,24 @@ video {
     color: #000;
     text-align: center;
     font-family: 'Coco Gothic Regular';
-    font-size: 32px;
+    font-size: 38px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    height: 44px;
+   
 }
 
 .com-profession {
-    color: #000;
-    text-align: center;
-    font-family: 'Coco Gothic Light';
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    margin-bottom: 9px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 20px;
+   color: #000;
+font-family: Chivo;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
 }
 
 .com-speech {
@@ -1155,7 +1169,7 @@ video {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin: auto 160px 37px;
+    margin: auto 150px 37px;
 }
 .whyus{
     
@@ -1241,7 +1255,7 @@ video {
 }
 .footer-speech{
     color: #FFF;
-font-family: 'Coco Gothic Regular';
+font-family: 'CocoGothic-Light',sans-serif;
 font-size: 24px;
 font-style: normal;
 font-weight: 400;
@@ -1317,3 +1331,4 @@ padding-bottom: 93px;
     opacity: 1;
 }
 /*/footer container*/
+

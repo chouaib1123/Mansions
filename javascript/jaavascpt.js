@@ -23,13 +23,16 @@ function changeBackground(index) {
       window.addEventListener('scroll', function() {
 
         const navbar = document.querySelector('.nav-container');
+        const firstsection = document.getElementById('s1');
         const navbarHeight = navbar.offsetHeight;
         const scrollPosition = window.scrollY;
         
         if (scrollPosition >= navbarHeight) {
             navbar.classList.add('sticky');
+            firstsection.style.paddingTop ="150px";
             
         } else {
             navbar.classList.remove('sticky');
+            firstsection.style.paddingTop ="0px";
         }
     });
