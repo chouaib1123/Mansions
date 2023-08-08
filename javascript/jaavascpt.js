@@ -1,20 +1,35 @@
-const b1 = document.getElementById('bt1');
-const b2 = document.getElementById('bt2');
-const b3 = document.getElementById('bt3');
-function bn1() {
-        b1.style.backgroundColor = "rgba(217, 217, 217, 0.51)";
-        b2.style.backgroundColor = "transparent";
-        b3.style.backgroundColor = "transparent";
-}
-function bn2() {
-        b2.style.backgroundColor = "rgba(217, 217, 217, 0.51)";
-        b1.style.backgroundColor = "transparent";
-        b3.style.backgroundColor = "transparent";
-}
-function bn3() {
-        b3.style.backgroundColor = "rgba(217, 217, 217, 0.51)";
-        b2.style.backgroundColor = "transparent";
-        b1.style.backgroundColor = "transparent";
-}
+function changeBackground(index) {
+        const buttons = document.querySelectorAll('.button-container button');
+        const highlight = document.querySelector('.background-highlight');
+        const activeButton = document.querySelector('.button-container .active');
+      
+        const targetButton = buttons[index];
+        const targetRect = targetButton.getBoundingClientRect();
+        const containerRect = targetButton.parentNode.getBoundingClientRect(); // Use parent container's rect to handle button's padding
+        const offsetX = targetRect.left - containerRect.left;
+        const offsetY = 0; // Set offsetY to 0 for horizontal translation
+      
+        highlight.style.transform = `translateX(${offsetX}px)`;
+        highlight.style.width = `${targetRect.width}px`; // Set the width to match the target button width
+        highlight.style.opacity = 1;
+      
+        activeButton.classList.remove('active');
+        targetButton.classList.add('active');
+      
+       
+      }
 
 
+      window.addEventListener('scroll', function() {
+
+        const navbar = document.querySelector('.nav-container');
+        const navbarHeight = navbar.offsetHeight;
+        const scrollPosition = window.scrollY;
+        
+        if (scrollPosition >= navbarHeight) {
+            navbar.classList.add('sticky');
+            
+        } else {
+            navbar.classList.remove('sticky');
+        }
+    });
