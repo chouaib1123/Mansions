@@ -355,11 +355,12 @@
 .section1_title p {
     color: #F8F8FB;
     font-family: 'Coco Gothic Regular';
-    font-size: 96px;
+   
+    font-size: clamp( 34px, 8vw, 96px);
     font-style: normal;
     font-weight: 700;
-    line-height: 90px;
-    width: 892px;
+    line-height: clamp( 34px, 8vw, 90px);
+    max-width: 892px;
 }
 .button-container {
     display: flex;
@@ -426,13 +427,15 @@
 
 .flex-container {
     display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
     align-items: center;
 }
 
 .searchbarre input {
     border-radius: 9px;
     background: #F8F8FB;
-    width: 481px;
+    width: 80%;
     height: 70px;
     flex-shrink: 0;
     border-color: transparent;
@@ -505,10 +508,10 @@
     color: #000;
     text-align: center;
     font-family: 'Coco Gothic Regular';
-    font-size: 64px;
+    font-size: clamp(28px,8vw,64px);
     font-style: normal;
     font-weight: 700;
-    line-height: 90px;
+    line-height:  normal;
     
 
 }
@@ -522,20 +525,22 @@
     font-weight: 400;
     line-height: normal;
   margin-bottom: 75px;
-    width: 700px;
+    max-width: 700px;
 }
 
 .first_collections {
     display: flex;    
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
+    gap: 4rem;
 }
 
 .cards {
     display: flex;
 }
 .card-container{
-    width:517px;
+    max-width:517px;
     overflow: hidden;
 }
 
@@ -753,25 +758,26 @@
     z-index: -1;
 }
 .relator-inner-container{
-    max-width: 1980px; margin: 0 auto;
+    max-width: 1980px;
+     margin: 0 auto;
 }
 
 .relator-title {
     color: #FFF;
     text-align: center;
     font-family: 'Coco Gothic Regular';
-    font-size: 64px;
+    font-size: clamp(28px,8vw ,64px);
     font-style: normal;
     font-weight: 700;
-    line-height: 90px;
+    line-height: normal;
     
     margin: 0 auto;
     margin-bottom: 13px;
     padding-top: 160px;
 }
 .relator-image{
-    width: 184px;
-    display: flex;
+    max-width: 184px;
+   
     margin: 0 auto;
 }
 .relator-image img{
@@ -785,20 +791,25 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    width: 909px;
+    max-width: 909px;
     margin: 0 auto;
     padding-bottom: 53px;
 }
 
 .relators {
-    margin: 130px 120px 229px;
+   
     display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 4rem;
 
 }
 .relator{
-    margin: auto 20px auto;
+   
     text-align: center;
-    padding: 10px;
+   
+    max-width: 300px;
     
 }
 
@@ -839,19 +850,20 @@
     align-items: center;
     width: 100%;
     z-index: -1;
-    overflow: hidden;
+    
+   
 
 }
 
 video {
     filter: blur(7px);
-
+ min-height: 1200px;
 }
 
 .video-container {
     display: flex;
     justify-content: center;
-    
+    flex-wrap: wrap;
     
     align-items: center;
     margin: 180px auto 180px;
@@ -860,26 +872,26 @@ video {
 .vid-title {
     color: #FFF;
     font-family: 'Coco Gothic Regular';
-    font-size: 64px;
+    font-size: clamp(24px,8vw,64px) ;
     font-style: normal;
     font-weight: 700;
-    line-height: 90px;
+    line-height: normal;
     /* 140.625% */
 }
 
 .vid-speech {
     color: #FFF;
     font-family: 'CocoGothic-Light',sans-serif;
-    font-size: 28px;
+    font-size: clamp(18px,8vw,28px);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    width: fit-content;
+   
 
 }
 .des{
     
-    width: 725px;
+    max-width: 725px;
 }
 .vid-title,.vid-speech{
     display: inline-block;
@@ -889,7 +901,7 @@ video {
     text-align: center;
     border-radius: 5px;
     background: rgba(217, 217, 217, 0.50);
-    margin-left: 100px;
+        
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
 }
 
@@ -926,7 +938,7 @@ video {
 .form-inp input {
 
     background: #F8F8FB;
-    width: 497.912px;
+    max-width: 497.912px;
     height: 65.344px;
     outline: none;
     border: none;
@@ -984,6 +996,8 @@ video {
 .whyus-cards {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
     align-items: center;
     padding-bottom: 129px;
 
@@ -1073,14 +1087,14 @@ video {
 }
 
 .com {
-    width: 1031px;
+    max-width: 1031px;
 
     flex-shrink: 0;
     border-radius: 5px;
     background: #FFF;
     position: absolute;
     transform: translateX(200%);
-    
+    margin: auto 50px auto;
     z-index: 1;
 
 
@@ -1250,6 +1264,8 @@ line-height: normal;
 }
 .footer-content{
     display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
     margin: 56px auto 170px;
     
 }
@@ -1260,8 +1276,13 @@ font-size: 24px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
-width: 370px;
-margin-right:196px ;
+max-width: 370px;
+
+}
+.footer-parts{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
 }
 .footer-sec{
     margin-right: 50px;
