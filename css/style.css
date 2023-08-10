@@ -732,7 +732,7 @@
 
 .flech1 {
     position: absolute;
-    left: 21%;
+    left: 17%;
     top: -5%;
 
 }
@@ -745,7 +745,7 @@
 
 .flech3 {
     position: absolute;
-    right: 20%;
+    right: 18%;
 }
 
 /*/how it work container*/
@@ -803,6 +803,7 @@
     margin: 0 auto;
     flex-wrap: wrap;
     gap: 4rem;
+    margin: auto 50px auto;
 
 }
 .relator{
