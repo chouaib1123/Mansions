@@ -1365,15 +1365,12 @@ filter: blur(8px);
 .footer-parts {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     margin: 0 auto;
-    gap: 4rem;
-    align-items: start;
+    gap: 2rem;
 }
 
-.footer-sec {
-    margin-right: 50px;
-}
+   
 
 .sec-title {
     color: #FFF;

@@ -62,17 +62,14 @@
         margin-bottom: 30px;
     }
     .footer-sec{
-        width:clamp(250px , 5vw , 300px) ;
-        margin: 0 auto;
+       
        display: flex;
        flex-direction: column;
-       align-items: center;
+      
     }
  }
  @media(max-width:395px){
-    .footer-parts{
-     justify-content: start ;
-    }
+    
     .cards{
         display: block;
         justify-content: center ;
