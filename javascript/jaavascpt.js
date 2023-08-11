@@ -29,10 +29,32 @@ function changeBackground(index) {
         
         if (scrollPosition >= navbarHeight) {
             navbar.classList.add('sticky');
-            firstsection.style.paddingTop ="150px";
+            firstsection.style.paddingTop ="80px";
             
         } else {
             navbar.classList.remove('sticky');
             firstsection.style.paddingTop ="0px";
         }
     });
+
+
+
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const sections = document.querySelectorAll(".footer-content");
+        const hiddenDivs = document.querySelectorAll(".inner-container");
+        
+        document.addEventListener("scroll", function() {
+          sections.forEach((section, index) => {
+            const boundingRect = section.getBoundingClientRect();
+            if (boundingRect.top < window.innerHeight && boundingRect.bottom > 0) {
+              // Display the hidden div for the corresponding section
+              hiddenDivs[index].style.display = "none";
+            } else {
+              // Hide the hidden div when not in the section
+              hiddenDivs[index].style.display = "block";
+            }
+          });
+        });
+      });
